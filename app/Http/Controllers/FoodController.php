@@ -59,8 +59,10 @@ class FoodController extends Controller
         return redirect('/food');
     }
 
-    public function destroy(FoodItem $foodItem)
+    public function destroy($id)
     {
+        $foodItem = FoodItem::findOrFail($id);
+
         $foodItem->delete();
 
         return redirect('/food');

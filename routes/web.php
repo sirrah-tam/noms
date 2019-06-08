@@ -21,3 +21,4 @@ Route::get('/food/{id}/edit', 'FoodController@edit');
 Route::get('/food/create', 'FoodController@create');
 Route::get('/food/{id}', 'FoodController@show');
 Route::patch('/food/{id}', 'FoodController@update');
+Route::delete('/food/{id}/delete', 'FoodController@destroy');
