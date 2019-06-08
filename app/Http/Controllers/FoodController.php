@@ -19,6 +19,34 @@ class FoodController extends Controller
         return view('food.create');
     }
 
+    public function edit($id)
+    {
+        $foodItem = FoodItem::findOrFail($id);
+
+        return view('food.edit', compact('foodItem'));
+    }
+
+    public function show($id)
+    {
+        $foodItem = FoodItem::findOrFail($id);
+
+        return view('food.show', compact('foodItem'));
+    }
+
+    public function update($id)
+    {
+        $validated = request()->validate([
+            'name' => 'required',
+            'description' => ''
+        ]);
+
+        $foodItem = FoodItem::findOrFail($id);
+
+        $foodItem->update($validated);
+
+        return view('food.show', compact('foodItem'));
+    }
+
     public function store()
     {
         $validated = request()->validate([

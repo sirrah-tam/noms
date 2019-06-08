@@ -17,4 +17,7 @@ Route::get('/', function () {
 
 Route::get('/food', 'FoodController@index');
 Route::post('/food', 'FoodController@store');
+Route::get('/food/{id}/edit', 'FoodController@edit');
 Route::get('/food/create', 'FoodController@create');
+Route::get('/food/{id}', 'FoodController@show');
+Route::patch('/food/{id}', 'FoodController@update');
