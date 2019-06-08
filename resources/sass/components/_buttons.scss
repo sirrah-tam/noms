@@ -1,0 +1,7 @@
+.btn {
+    @apply inline-block bg-blue-700 text-white py-1 px-3;
+
+    &:hover {
+        @apply bg-blue-500;
+    }
+}
