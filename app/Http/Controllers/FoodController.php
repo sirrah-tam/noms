@@ -19,28 +19,22 @@ class FoodController extends Controller
         return view('food.create');
     }
 
-    public function edit($id)
+    public function edit(FoodItem $foodItem)
     {
-        $foodItem = FoodItem::findOrFail($id);
-
         return view('food.edit', compact('foodItem'));
     }
 
-    public function show($id)
+    public function show(FoodItem $foodItem)
     {
-        $foodItem = FoodItem::findOrFail($id);
-
         return view('food.show', compact('foodItem'));
     }
 
-    public function update($id)
+    public function update(FoodItem $foodItem)
     {
         $validated = request()->validate([
             'name' => 'required',
             'description' => ''
         ]);
-
-        $foodItem = FoodItem::findOrFail($id);
 
         $foodItem->update($validated);
 
@@ -59,10 +53,8 @@ class FoodController extends Controller
         return redirect('/food');
     }
 
-    public function destroy($id)
+    public function destroy(FoodItem $foodItem)
     {
-        $foodItem = FoodItem::findOrFail($id);
-
         $foodItem->delete();
 
         return redirect('/food');
