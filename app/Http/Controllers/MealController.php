@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Meal;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class MealController extends Controller
@@ -37,12 +38,13 @@ class MealController extends Controller
      */
     public function store(Request $request)
     {
-        $validated = request()->validate([
-            'name' => 'required',
-            'notes' => ''
-        ]);
-        
-        Meal::create($validated);
+        $foodStuffs = $request->foodStuff;
+
+        $meal = new Meal;
+
+        foreach ($foodStuffs as $food) {
+            // Add Food Item function
+        }
 
         return redirect('/meals');
     }

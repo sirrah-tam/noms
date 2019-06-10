@@ -13,6 +13,6 @@ class Meal extends Model
 
     public function food()
     {
-        return $this->hasMany(FoodItem::class);
+        return $this->belongsToMany(FoodItem::class);
     }
 }
