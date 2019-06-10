@@ -10,7 +10,7 @@
       {{-- Name Field --}}
       <div class="mb-5">
         <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name</label>
-        <input type="text" name="name" id="name" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+        <input type="text" name="name" id="name" required class="">
       </div>
 
       {{-- Description Field --}}
@@ -19,6 +19,19 @@
         <textarea name="notes" id="notes" cols="30" rows="10" class="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
       </div>
 
+      <strong class="block mb-5">This meals needs:</strong>
+      <label for="foodStuff" class="sr-only">Food Stuff</label>
+      <input type="text" name="foodStuff[]">
+      <input type="text" name="foodStuff[]">
+      <input type="text" name="foodStuff[]">
+      <input type="text" name="foodStuff[]">
+      <input type="text" name="foodStuff[]">
+      <input type="text" name="foodStuff[]">
+      <input type="text" name="foodStuff[]">
+      <input type="text" name="foodStuff[]">
+      <input type="text" name="foodStuff[]">
+      <input type="text" name="foodStuff[]">
+      
       {{-- Submit buttom --}}
       <button type="submit" class="p-2 bg-blue-800 text-white">Add Meal</button>
 
