@@ -42,8 +42,13 @@ class MealController extends Controller
 
         $meal = new Meal;
 
+        $meal->name = $request->name;
+        $meal->notes = $request->notes;
+
+        $meal->save();
+
         foreach ($foodStuffs as $food) {
-            // Add Food Item function
+            $meal->addFood($food);
         }
 
         return redirect('/meals');
