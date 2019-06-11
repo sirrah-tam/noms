@@ -17,15 +17,4 @@ class FoodItem extends Model
     {
         return $this->belongsToMany(Meal::class);
     }
-
-    public function addFoodItem($food) {
-        $foodItem = \App\FoodItem::where('name', '=', $food);
-
-        if ($foodItem->exists()) {
-            // Create new entry in Food Item Meal table
-        } else {
-            // Create new entry in Food Table
-            // Create new entry in Food Item Meal table
-        }
-    }
 }
