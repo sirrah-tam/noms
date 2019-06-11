@@ -7,6 +7,7 @@ use Faker\Generator as Faker;
 
 $factory->define(Meal::class, function (Faker $faker) {
     return [
-        //
+        'name' => $faker->word,
+        'notes' => $faker->sentence
     ];
 });
