@@ -1,7 +1,7 @@
 @extends('layouts.default')
 
 @section('content')
-  <section class="container mx-auto">
+  <section class="page-content container">
     <h1 class="text-center">Add new food stuffs</h1>
     <form method="POST" action="/food" class="w-full max-w-xs mx-auto">
       {{-- CSRF token --}}

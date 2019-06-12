@@ -1,7 +1,7 @@
 @extends('layouts.default')
 
 @section('content')
-  <section class="container mx-auto">
+  <section class="page-content container">
     <h1 class="text-center">Update Meal</h1>
     <form method="POST" action="/meals/{{ $meal->id }}" class="w-full max-w-xs mx-auto">
       {{-- CSRF token --}}

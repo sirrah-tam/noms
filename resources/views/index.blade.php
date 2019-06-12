@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="container mx-auto p-16 text-center">
+    <div class="page-content container text-center">
         <h1>Noms: A recipe & grocery project</h1>
         <p>What's for dinner?</p>
         <nav class="py-10">

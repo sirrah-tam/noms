@@ -1,7 +1,7 @@
 @extends('layouts.default')
 
 @section('content')
-  <div class="container mx-auto">
+  <div class="page-content container">
     <div class="md:w-1/3 mx-auto">
       <h1>{{ $meal->name }}</h1>
       @if ($meal->notes)
