@@ -36,16 +36,16 @@ class MealController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {
-        $foodStuffs = $request->foodStuff;
-
         $meal = new Meal;
 
-        $meal->name = $request->name;
-        $meal->notes = $request->notes;
+        $meal->name = request('name');
+        $meal->notes = request('notes') ? request('notes') : '';
 
         $meal->save();
+
+        $foodStuffs = request('foodStuff');
 
         foreach ($foodStuffs as $food) {
             $meal->addFood($food);

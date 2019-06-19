@@ -16,23 +16,13 @@ class Meal extends Model
         return $this->belongsToMany(FoodItem::class);
     }
 
-    public function addFood($food) {
+    public function addFood($food) 
+    {
         if ($food == '') {
             return;
         }
 
-        $foodItem = \App\FoodItem::where('name', '=', $food);
-        
-        if ($foodItem->exists()) {
-            // Create new entry in Food Item Meal table
-            $this->food()->attach($foodItem->first()->id);
-        } else {
-            // Create new entry in Food Table
-            $newFoodItem = new \App\FoodItem;
-            $newFoodItem->name = $food;
-            $newFoodItem->save();
-            // Create new entry in Food Item Meal table
-            $this->food()->attach($newFoodItem->id);
-        }
+        $foodItem = \App\FoodItem::firstOrCreate(['name' => $food]);
+        $this->food()->attach($foodItem);
     }
 }
