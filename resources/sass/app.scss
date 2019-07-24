@@ -12,6 +12,7 @@
 
 // Layouts
 @import 'layouts/containers';
+@import 'layouts/header';
 
 // Components
 @import 'components/buttons';
@@ -19,3 +20,6 @@
 
 // Utilities
 @import "~tailwindcss/utilities";
+
+// Pages
+@import "pages/home";

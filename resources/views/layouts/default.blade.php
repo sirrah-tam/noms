@@ -7,14 +7,22 @@
 
   <title>@yield('title', 'Noms | Recipe & Grocery List')</title>
 
+
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,400,700" rel="stylesheet">
   <link rel="stylesheet" href="/css/app.css">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/145f6331f8.js"></script>  
 </head>
 
 <body class="@yield('body-class')">
   <div id="app">
+    @include('partials.layout.header')
+
     @yield('content')
+
+    @include('partials.layout.footer')
   </div>
 </body>
   <script src="/js/app.js"></script>

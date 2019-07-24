@@ -22,7 +22,7 @@
       </div>
 
       {{-- Submit buttom --}}
-      <button type="submit" class="p-2 bg-blue-800 text-white">Update</button>
+      <button type="submit" class="btn bg-blue-800 text-white">Update</button>
 
       {{-- Errors --}}
       @if($errors->any())

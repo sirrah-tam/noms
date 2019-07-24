@@ -14,7 +14,7 @@
       </ul>
     </div>
     <div class="md:w-1/2 mx-auto my-10 text-center">
-      <a href="/meals/create" class="btn bg-green-700">Add New Meal</a>
+      <a href="/meals/create" class="btn bg-green-700"><span class="fas fa-plus pr-3" aria-hidden="true"></span>Add New Meal</a>
     </div>
   </section>
 @endsection

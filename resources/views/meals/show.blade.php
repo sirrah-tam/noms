@@ -19,11 +19,11 @@
           @endforeach
         </ul>
       @endif
-      <a href="/meals/{{ $meal->id }}/edit" class="btn my-5">Edit</a>
+      <a href="/meals/{{ $meal->id }}/edit" class="btn my-5"><span class="fas fa-edit pr-3" aria-hidden="true"></span>Edit</a>
       <form method="POST" action="/meal/{{ $meal->id }}/delete">
         @csrf
         @method('delete')
-        <button type="submit" class="btn bg-red-700">Delete</button>
+        <button type="submit" class="btn bg-red-700"><span class="fas fa-trash pr-3" aria-hidden="true"></span>Delete</button>
       </form>
       <a href="/meals" class="block mt-8 text-blue-700 font-semibold">&lt; Back to all</a>
     </div>

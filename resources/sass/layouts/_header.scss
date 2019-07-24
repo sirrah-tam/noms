@@ -1,0 +1,17 @@
+header {
+  padding: 2rem 1rem;
+
+  nav {
+    text-align: center;
+
+    a {
+      @apply border-2;
+
+      padding: 1rem;
+
+      &:hover {
+        @apply border-gray-500;
+      }
+    }
+  }
+}

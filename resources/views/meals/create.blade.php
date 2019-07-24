@@ -33,7 +33,7 @@
       <input type="text" name="foodStuff[]">
       
       {{-- Submit buttom --}}
-      <button type="submit" class="p-2 bg-blue-800 text-white">Add Meal</button>
+      <button type="submit" class="btn bg-blue-800 text-white">Add Meal</button>
 
       {{-- Errors --}}
       @if($errors->any())

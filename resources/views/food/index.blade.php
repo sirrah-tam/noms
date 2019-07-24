@@ -14,7 +14,7 @@
       </ul>
     </div>
     <div class="md:w-1/2 mx-auto my-10 text-center">
-      <a href="/food/create" class="btn bg-green-700">Add +</a>
+      <a href="/food/create" class="btn bg-green-700"><span class="fas fa-plus pr-3" aria-hidden="true"></span>Add</a>
     </div>
   </section>
 @endsection
