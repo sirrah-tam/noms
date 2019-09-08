@@ -1,16 +1,26 @@
 header {
-  padding: 2rem 1rem;
+  padding: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 
   nav {
     text-align: center;
 
-    a {
-      @apply border-2;
+    .btn {
+      &--home {
+        @apply border-gray-500 border-2;
 
-      padding: 1rem;
-
-      &:hover {
-        @apply border-gray-500;
+        color: theme('colors.blue.900');
+        background-color: transparent;
+        display: inline-block;
+        font-size: 1.5rem;
+  
+        &:hover {
+          color: theme('colors.white'); 
+          border-color: transparent;
+        }
       }
     }
   }
