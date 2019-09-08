@@ -1,9 +1,17 @@
 h1 {
-  @apply text-6xl;
+  @apply text-4xl;
+  
+  @screen md {
+    @apply text-6xl;
+  }
 }
 
 h2 {
-  @apply text-5xl;
+  @apply text-3xl;
+
+  @screen md {
+    @apply text-5xl;
+  }
 }
 
 h3 {

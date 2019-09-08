@@ -8,6 +8,7 @@
 @tailwind base;
 @tailwind components;
 
+@import 'global';
 @import 'typography';
 
 // Layouts
@@ -16,6 +17,7 @@
 
 // Components
 @import 'components/buttons';
+@import 'components/forms';
 @import 'components/fields';
 
 // Utilities
