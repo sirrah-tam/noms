@@ -20,3 +20,7 @@ Route::resource('food', 'FoodController')->parameters([
 ]);
 
 Route::resource('meals', 'MealController');
+
+Auth::routes();
+
+Route::get('/admin', 'AdminController@index')->name('admin');

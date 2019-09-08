@@ -7,6 +7,9 @@
 
   <title>@yield('title', 'Noms | Recipe & Grocery List')</title>
 
+  <!-- CSRF Token -->
+  <meta name="csrf-token" content="{{ csrf_token() }}">
+
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,400,700" rel="stylesheet">
