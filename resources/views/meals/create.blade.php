@@ -3,20 +3,20 @@
 @section('content')
   <section class="page-content container">
     <h1 class="text-center">Add new Meal</h1>
-    <form method="POST" action="/meals" class="w-full max-w-xs mx-auto">
+    <form method="POST" action="/meals">
       {{-- CSRF token --}}
       @csrf
 
       {{-- Name Field --}}
       <div class="mb-5">
-        <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name</label>
+        <label for="name" >Name</label>
         <input type="text" name="name" id="name" required class="">
       </div>
 
       {{-- Description Field --}}
       <div class="mb-5">
-        <label for="notes" class="block text-gray-700 text-sm font-bold mb-2">Notes</label>
-        <textarea name="notes" id="notes" cols="30" rows="10" class="shadow border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+        <label for="notes" >Notes</label>
+        <textarea name="notes" id="notes" cols="30" rows="10"></textarea>
       </div>
 
       <strong class="block mb-5">This meals needs:</strong>
