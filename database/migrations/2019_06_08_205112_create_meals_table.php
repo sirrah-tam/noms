@@ -15,6 +15,7 @@ class CreateMealsTable extends Migration
     {
         Schema::create('meals', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedInteger('owner_id');
             $table->string('name');
             $table->string('notes');
             $table->timestamps();

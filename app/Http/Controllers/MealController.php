@@ -15,7 +15,7 @@ class MealController extends Controller
      */
     public function index()
     {
-        $meals = Meal::all();
+        $meals = Meal::where('owner_id', auth()->id())->get();
 
         return view('meals.index', compact('meals'));
     }
@@ -40,6 +40,7 @@ class MealController extends Controller
     {
         $meal = new Meal;
 
+        $meal->owner_id = auth()->id();
         $meal->name = request('name');
         $meal->notes = request('notes') ? request('notes') : '';
 
