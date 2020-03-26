@@ -16,7 +16,6 @@ class CreateFoodTable extends Migration
         Schema::create('food', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name')->unique();
-            $table->boolean('in_stock')->default(false);
             $table->text('description');
             $table->timestamps();
         });

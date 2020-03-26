@@ -44,8 +44,7 @@ class FoodController extends Controller
     public function store()
     {
         $validated = request()->validate([
-            'name' => 'required',
-            'description' => ''
+            'name' => 'required'
         ]);
         
         FoodItem::create($validated);
